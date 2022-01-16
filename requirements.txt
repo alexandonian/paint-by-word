@@ -1,0 +1,7 @@
+cma
+git+https://github.com/openai/CLIP.git
+imageio
+imageio-ffmpeg
+lpips
+opencv-python
+tqdm
