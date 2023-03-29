@@ -38,9 +38,10 @@ conda activate paintbyword
 pip install -e .
 ./scripts/setup_env.sh
 ```
+
 ## Painting
 
-### Free form painting with words:
+### Free form painting with words
 
 ```python
 from paintbyword import StyleganPainter
@@ -59,12 +60,14 @@ z, image, loss_history, im_history = painter.paint(
 # Show the painted output image.
 show(pilim(image[0]))
 ```
+
 should produce an image similar to the one below on the right with the optimization history on the left:
 <!-- Insert image -->
 ![yellow bird](./assets/yellow_bird.png)
 ![yellow bird](./assets/yellow_bird.gif)
 
-### Masked painting with words:
+### Masked painting with words
+
 ```python
 from paintbyword import StyleganMaskedPainter
 from paintbyword.utils import show, pilim
@@ -78,6 +81,7 @@ painter.show_seed_images(batch_size=32)
 choice = 30  # Choose index of desired seed image.
 painter.mask_seed_image(choice)  # Scribble mask on seed image.
 ```
+
 ![masked painting](./assets/bed_scribble.gif)
 
 ```python
@@ -89,20 +93,21 @@ result = painter.paint(
 # Show the painted output image.
 show(pilim(image[0]))
 ```
+
 ![painted image](./assets/rustic_bed.png)
 
 For complete working examples, please see the juypter notebooks in the `notebooks` directory.
-
 
 ### Citation
 
 If you use this code for your research, please cite our [paper](https://arxiv.org/abs/2103.10951).
 
 ```bash
-@article{bau2021paint,
-  title={Paint by word},
-  author={Bau, David and Andonian, Alex and Cui, Audrey and Park, YeonHwan and Jahanian, Ali and Oliva, Aude and Torralba, Antonio},
-  journal={arXiv preprint arXiv:2103.10951},
-  year={2021}
+@misc{bau2021paintbyword,
+title={Paint by Word},
+author={Alex Andonian and Sabrina Osmany and Audrey Cui and YeonHwan Park and Ali Jahanian and Antonio Torralba and David Bau},
+year={2021},
+eprint={arXiv:2103.10951},
+}
 }
 ```
