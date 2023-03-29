@@ -33,7 +33,7 @@ cd paint-by-word
 We highly recommend that you install additional dependencies in an isolated python virtual environment (of your choosing). For Conda+pip users, you can create a new conda environment and then pip install dependencies with the following snippet:
 
 ```bash
-conda env create -f scripts/environment.yaml
+conda env create -f scripts/environment.yml
 conda activate paintbyword
 pip install -e .
 ./scripts/setup_env.sh
